@@ -30,7 +30,7 @@ export default function LearnOptionsScreen(props) {
   return (
     <ImageBackground
       imageStyle={{opacity: 0.5}}
-      style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}
+      style={{height: height,alignItems: 'center', justifyContent: 'center'}}
       source={require('../assets/images/kidsschool.jpg')}>
       <TouchableOpacity onPress={() => navigation.goBack()} style={{marginBottom: height * 0.05}}>
         <Icon
@@ -38,7 +38,7 @@ export default function LearnOptionsScreen(props) {
           // reverse
           name="home"
           raised
-          size={30}
+          //size={30}
           iconStyle={{fontSize: 35, color:'#001'}}
         />
       </TouchableOpacity>
@@ -56,7 +56,9 @@ export default function LearnOptionsScreen(props) {
               <TouchableOpacity
                 onPress={() => navigation.navigate('LearningScreen', {data: e})}
                 style={{
-                  padding: 20,
+                  //padding: 20,
+                  justifyContent:'center',
+                  height: height * 0.1,
                   borderTopLeftRadius: idx % 2 ? 20 : 0,
                   borderBottomLeftRadius: idx % 2 ? 20 : 0,
                   borderTopRightRadius: idx % 2 ? 0 : 20,
@@ -70,11 +72,11 @@ export default function LearnOptionsScreen(props) {
                   borderBottomColor:'#f76',
                   borderTopWidth: 14,
                   borderTopColor:'#3453f0',
-                  margin: 10,
+                  margin: 5,
                   backgroundColor: 'black',
                 }}>
                 <Text
-                  style={{fontSize: 25, textAlign: 'center', color: '#ffe'}}>
+                  style={{fontSize: 20, textAlign: 'center', color: '#ffe'}}>
                   {e.displayName}
                 </Text>
               </TouchableOpacity>

@@ -82,7 +82,7 @@ export default function LearningScreen(props) {
       blurRadius={0.5}
       imageStyle={{opacity: 0.9}}
       style={{
-        flex: 1,
+       // flex: 1,
         alignItems: 'center',
         height: height,
         width: width,
@@ -91,13 +91,14 @@ export default function LearningScreen(props) {
       source={require('../assets/images/kidsschool.jpg')}>
       <View
         style={{
-          flex: 1,
+         // flex: 1,
           backgroundColor: 'rgba(0,0,0,0.2)',
           width: width,
+          height: height
         }}>
         {/* wraper1//// */}
-        <View style={{flex: 1}}>
-          <View style={{padding: 10, alignItems: 'flex-end'}}>
+        <View style={{height: height * 0.2}}>
+          <View style={{height: height * 0.1, alignItems: 'flex-end', justifyContent:'center'}}>
             <TouchableOpacity onPress={() => navigation.navigate('HomeScreen')}>
               <Icon
                 name="home"
@@ -108,7 +109,7 @@ export default function LearningScreen(props) {
             </TouchableOpacity>
           </View>
 
-          <View style={{alignItems: 'center', justifyContent: 'center'}}>
+          <View style={{alignItems: 'center', height: height * 0.1, justifyContent: 'center'}}>
             <View
               style={{
                 backgroundColor: '#fffa',
@@ -140,7 +141,7 @@ export default function LearningScreen(props) {
 
         {/* wraper2.... */}
 
-        <View style={{flex: 2, justifyContent: 'center'}}>
+        <View style={{justifyContent: 'center',height: height * 0.5}}>
           <Image
             source={content[data.name][count].image}
             resizeMode="contain"
@@ -152,7 +153,7 @@ export default function LearningScreen(props) {
           />
         </View>
         {/* wraper3.... */}
-        <View style={{flex: 1}}>
+        <View style={{height: height * 0.3, justifyContent:'center'}}>
           <View style={{justifyContent: 'space-between', flexDirection: 'row'}}>
             <TouchableOpacity style={{paddingLeft: 30}} onPress={decreaseCount}>
               <Icon
@@ -182,7 +183,7 @@ export default function LearningScreen(props) {
           <View
             style={{
               justifyContent: 'center',
-              marginTop: height * 0.05,
+              marginTop: height * 0.03,
               alignItems: 'center',
             }}>
             <TouchableOpacity
